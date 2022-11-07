@@ -7,20 +7,6 @@
 #Project Description: Working Connect 4 Game using tkinter gui framework.  
 ####################
 
-
-# import tkinter as tk
-
-# window = tk.Tk()
-# window.title("Hello wold")
-# window.geometry("300x300")
-
-
-
-
-# tk.mainloop()
-
-import random
-
 def print_gameboard():
   for row in gameboard:
     for col in row:
@@ -68,13 +54,24 @@ def check_winner(player_token):
   return False          
             
       
-      
-
-
-
-
 gameboard = [['-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-'], ['-', '-', '-', '-', '-', '-']]
-gameboard_size = width, height = len(gameboard), len(gameboard[0])
+gameboard_size = width, height = len(gameboard), len(gameboard[0])    
+
+
+import tkinter as tk
+from tkinter import ttk
+import random
+
+window = tk.Tk()
+frame = ttk.Frame(window)
+window.title("Hello wold")
+window.geometry("300x300")
+
+
+
+
+tk.mainloop()
+
 
 
 print("Hello this is a Connect 4 Game!")
